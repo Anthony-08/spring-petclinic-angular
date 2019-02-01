@@ -1,44 +1,31 @@
-<form #ofertaForm = "ngForm" *ngIf = "active" (ngSubmit)="onSubmit(ofertaForm.value)">
+<form #ofertaForm = "ngForm" (ngSubmit)="onSubmit(ofertaForm.value)">
     
     <div class="form-group">
     <label for="titulo">Titulo</label>
     <input type="text" class="form-control" required 
     [(ngModel)]="ofertas.titulo" name="titulo">
-        <div [hidden]="titulo.valid || titulo.pristine" class="alert alert-danger">
-        Es necesario un titulo
-        </div>
+    
     </div>
 
     <div class="form-group">
             <label for="detalle">Detalles</label>
             <input type="text" class="form-control" required 
             [(ngModel)]="ofertas.detalle" name="detalle">
-            </div>
-            
-            <div [hidden]="detalle.valid || detalle.pristine" class="alert alert-danger">
-                    Es necesario detallar la oferta
-                    </div>
+    </div>
             
     <div class="form-group">
             <label for="descuento">Descuento (%)</label>
             <input type="number" class="form-control" required 
             [(ngModel)]="ofertas.descuento" name="descuento">
-            </div>
+    </div>
 
-            <div [hidden]="descuento.valid || descuento.pristine" class="alert alert-danger">
-                    Es necesario un descuento
-                    </div>
-            
     <div class="form-group">
             <label for="fecha">Fecha Vencimiento</label>
             <input type="date" class="form-control" required 
             [(ngModel)]="ofertas.fecha" name="fecha">
-            </div>  
+    </div>  
 
-            <div [hidden]="fecha.valid || fecha.pristine" class="alert alert-danger">
-                    Es necesaria una fecha de vencimiento
-                    </div>
-
+    
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button class="btn btn-default" type="submit" [disabled]="!ofertaForm.valid">Añadir oferta</button>
