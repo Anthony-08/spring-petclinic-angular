@@ -1,15 +1,17 @@
-
-<table class="tg">
-  <tr>
-    <th class="tg-s268">Titulo</th>
-    <th class="tg-0lax">Detalles_Oferta</th>
-    <th class="tg-0lax">Descuento</th>
-    <th class="tg-0lax">Fecha_Oferta</th>
-  </tr>
-  <tr *ngFor="let oferta of ofertaLista">
-    <th class="tg0pky">{{oferta.titulo}}</th>
-    <th class="tg0pky">{{oferta.detalle}}</th>
-    <th class="tg0pky">{{oferta.descuento}}</th>
-    <th class="tg0pky">{{oferta.fecha}}</th>
-  </tr>
-</table>
+<div class="pad">
+  <table class="tg">
+    <tr>
+      <th class="tg-s268">Titulo</th>
+      <th class="tg-0lax">Detalles Oferta</th>
+      <th class="tg-0lax">Descuento</th>
+      <th class="tg-0lax">Fecha Oferta</th> 
+    </tr>
+    <tr *ngFor="let oferta of ofertaLista">
+      <th class="tg-0pky">{{oferta.titulo}}</th>
+      <th class="tg-0pky">{{oferta.detalle}}</th>
+      <th class="tg-0pky">{{oferta.descuento}}</th>
+      <th class="tg-0pky">{{oferta.fecha}}</th>
+    </tr>
+  </table>
+<br>
+</div>

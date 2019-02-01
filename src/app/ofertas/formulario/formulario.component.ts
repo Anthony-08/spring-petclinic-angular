@@ -24,7 +24,7 @@ export class FormularioComponent implements OnInit {
     oferta.id = null;
     this.ofertasService.postOferta(oferta).subscribe(
       new_oferta => {
-        this.router.navigate(['/ofertas', oferta.id]);
+        this.router.navigate(['ofertas']);
       },
       error => this.errorMessage = <any> error
     );
