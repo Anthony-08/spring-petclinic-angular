@@ -1,7 +1,7 @@
 export interface Ofertas {
     id: number;
-    title: string;
-    detail: string;
-    discount: number;
-    date: Date;
+    titulo: string;
+    detalle: string;
+    descuento: number;
+    fecha: Date;
 }

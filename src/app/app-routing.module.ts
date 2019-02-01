@@ -31,10 +31,10 @@ import { FormularioComponent } from './ofertas/formulario/formulario.component';
 const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'welcome', component: WelcomeComponent},
-  {path: '**', component: PageNotFoundComponent},
   {path: 'home', component: TablaFiltradaComponent},
   {path: 'ofertas', component: TablaComponent},
-  {path: 'ofertas/agregar', component: FormularioComponent}
+  {path: 'ofertas/agregar', component: FormularioComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
