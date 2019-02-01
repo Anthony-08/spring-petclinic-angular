@@ -1,4 +1,4 @@
-
+<div class="pad">
 <table class="tg">
   <tr>
     <th class="tg-0lax">Id</th>
@@ -6,6 +6,7 @@
     <th class="tg-0lax">Detalles_Oferta</th>
     <th class="tg-0lax">Descuento</th>
     <th class="tg-0lax">Fecha_Oferta</th>
+    <th class="tg-0lax">Borrar Oferta</th>    
   </tr>
   <tr *ngFor="let oferta of ofertaLista">
     <th class="tg-0pky">{{oferta.id}}</th>
@@ -13,5 +14,13 @@
     <th class="tg-0pky">{{oferta.detalle}}</th>
     <th class="tg-0pky">{{oferta.descuento}}</th>
     <th class="tg-0pky">{{oferta.fecha}}</th>
+    <th class="tg-0pky"><button type="button" class="button3">Borrar</button></th>
   </tr>
 </table>
+<br>
+</div>
+<div class="pad">
+  <a routerLink="../Agregar" routerLinkActive="active" (click)="onSelect(user)">
+    <button type="button" class="button">Agregar oferta.</button>
+  </a>
+</div>

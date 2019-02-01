@@ -3,5 +3,32 @@
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#aaa;color:#fff;background-color:#f38630;}
 .tg .tg-0lax{text-align:center;vertical-align:center}
 .tg .tg-s268{text-align:center}
-.tg .tg-dg7a{background-color:#FCFBE3;text-align:left;vertical-align:top}
-.tg .tg-0pky{color:black;background-color:#FCFBE3;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-dg7a{background-color:#FCFBE3;text-align:center;vertical-align:top}
+.tg .tg-0pky{text-align: center; color:black;background-color:#FCFBE3;border-color:inherit;vertical-align:top}
+
+
+.button3 {
+    background-color: #f44336;  /* Red */ 
+    border: none;
+    color: white;
+    padding: 15px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .pad {
+    padding: 15px 15px;
+  }
