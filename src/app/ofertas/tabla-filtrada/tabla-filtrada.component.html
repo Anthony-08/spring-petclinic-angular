@@ -1,3 +1,16 @@
 <p>
-  tabla-filtrada works!
+  <table class="tg">
+    <tr>
+      <th class="tg-s268">Titulo</th>
+      <th class="tg-0lax">Detalles_Oferta</th>
+      <th class="tg-0lax">Descuento</th>
+      <th class="tg-0lax">Fecha_Oferta</th>
+    </tr>
+    <tr *ngFor="let oferta of ofertaLista">
+      <th class="tg0pky">{{title}}</th>
+      <th class="tg0pky">{{detail}}</th>
+      <th class="tg0pky">{{discount}}</th>
+      <th class="tg0pky">{{date}}</th>
+    </tr>
+  </table>
 </p>

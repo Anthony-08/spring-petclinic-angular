@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { TablaComponent } from './tabla/tabla.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TablaFiltradaComponent } from './tabla-filtrada/tabla-filtrada.component';
+import { OfertasService } from './ofertas.service';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { TablaFiltradaComponent } from './tabla-filtrada/tabla-filtrada.componen
     TablaComponent,
     FormularioComponent,
     TablaFiltradaComponent
-  ]
+  ],
+  providers: [OfertasService]
 })
 export class OfertasModule { }

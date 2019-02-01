@@ -24,11 +24,17 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './parts/page-not-found/page-not-found.component';
 import {WelcomeComponent} from './parts/welcome/welcome.component';
+import { TablaFiltradaComponent } from './ofertas/tabla-filtrada/tabla-filtrada.component';
+import { TablaComponent } from './ofertas/tabla/tabla.component';
+import { FormularioComponent } from './ofertas/formulario/formulario.component';
 
 const appRoutes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'welcome', component: WelcomeComponent},
-  {path: '', component: WelcomeComponent},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', component: PageNotFoundComponent},
+  {path: 'home', component: TablaFiltradaComponent},
+  {path: 'ofertas', component: TablaComponent},
+  {path: 'ofertas/agregar', component: FormularioComponent}
 ];
 
 @NgModule({

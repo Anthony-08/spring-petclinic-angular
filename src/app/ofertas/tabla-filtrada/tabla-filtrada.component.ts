@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OfertasService } from '../ofertas.service';
+import { Ofertas } from '../models/ofertas';
 
 @Component({
   selector: 'app-tabla-filtrada',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaFiltradaComponent implements OnInit {
 
-  constructor() { }
+  public ofertaLista: Array<Ofertas>;
+
+  constructor(private ofertasService: OfertasService) { }
 
   ngOnInit() {
+    this.ofertasService.getOfertasVigentes().subscribe( data => {
+      this.ofertaLista = data;
+    })
   }
 
 }

@@ -1,4 +1,6 @@
+import { OfertasService } from './../ofertas.service';
 import { Component, OnInit } from '@angular/core';
+import { Ofertas } from '../models/ofertas';
 
 @Component({
   selector: 'app-tabla',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaComponent implements OnInit {
 
-  constructor() { }
+  public ofertaLista: Array<Ofertas>;
+
+  constructor(private ofertasService: OfertasService) { }
 
   ngOnInit() {
+    this.ofertasService.getOfertas().subscribe( data => {
+      this.ofertaLista = data;
+    })
   }
 
 }
