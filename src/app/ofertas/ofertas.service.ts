@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Ofertas } from './models/ofertas';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class OfertasService {
 
-  public ruta = 'http://localhost:9966/petclinic/api/ofertas/';
+  public ruta = environment.REST_API_URL + 'ofertas/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,7 +23,7 @@ export class OfertasService {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    return this.httpClient.post(this.ruta, oferta, { headers });
+    return this.httpClient.post(this.ruta, oferta, { headers }); //, { headers }
   }
   public deleteOferta(id: number){
     return this.httpClient.delete(this.ruta + id);
