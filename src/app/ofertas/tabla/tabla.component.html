@@ -14,13 +14,11 @@
     <th class="tg-0pky">{{oferta.detalle}}</th>
     <th class="tg-0pky">{{oferta.descuento}}</th>
     <th class="tg-0pky">{{oferta.fecha}}</th>
-    <th class="tg-0pky"><button type="button" class="button3">Borrar</button></th>
+    <th class="tg-0pky"><button type="button" class="button3" (click)="borrarOferta(oferta.id)">Borrar</button></th>
   </tr>
 </table>
 <br>
 </div>
 <div class="pad">
-  <a routerLink="../Agregar" routerLinkActive="active" (click)="onSelect(user)">
-    <button type="button" class="button">Agregar oferta.</button>
-  </a>
+    <button type="button" class="button" (click)="goFormulario()" >Agregar oferta.</button>
 </div>
