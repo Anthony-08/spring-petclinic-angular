@@ -25,9 +25,13 @@ export class TablaComponent implements OnInit {
   }
 
   public borrarOferta(id: number){
-    this.ofertasService.deleteOferta(id).subscribe( data => {
-      this.router.navigate(['ofertas']);
-    });
+    this.ofertasService.deleteOferta(id).subscribe( result => {
+      this.ofertasService.getOfertas().subscribe( data => {
+        this.ofertaLista = data;
+      });
+    }, 
+    error => console.log('error')
+    );
   }
 
 }
